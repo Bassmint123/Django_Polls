@@ -22,7 +22,8 @@
 
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -34,14 +35,13 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
+                    <!-- Home navigation -->
                     <li class="active"><a href="{% url 'index' %}"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> Home</span></a></li>
-                    <!-- ######################################
-                    # Update the ### below with the right url #
-                    ########################################-->
+                    <!-- Voting Page navigation -->
                     <li><a href="{% url 'index' %}"><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> Voting Page</span></a></li>
-
+                    <!-- About Us page nav -->
                     <li><a href="{% url 'about' %}"><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> About</span></a></li>
-
+                    <!-- Admin nav -->
                     <li><a href="{% url 'admin:index' %}"><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> Admin</span></a></li>
                 </ul>
             </div>
