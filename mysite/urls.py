@@ -17,16 +17,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-]
 """
 
 from django.contrib import admin
 from django.urls import include, path
+from .views import AboutPageView
+
+from . import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
+    path('about/', AboutPageView.as_view(), name='about'),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
